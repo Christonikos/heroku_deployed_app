@@ -1,0 +1,17 @@
+name: heroku_deplo
+channels:
+  - conda-forge
+dependencies:
+  - python==3.8
+  - numpy
+  - pandas
+  - scikit-learn
+  - pytest
+  - requests
+  - fastapi==0.63.0
+  - uvicorn
+  - gunicorn
+  - pip=20.3.3
+  - spyder-kernels=2.1
+  #- pip:
+  #  - spyder‑kernels==2.1
