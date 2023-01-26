@@ -1,3 +1,7 @@
+This project involves developing a classification model using publicly available Census Bureau data. Unit tests are implemented to monitor the model's performance on various data slices. The model is deployed using the FastAPI package and API tests are created for further validation. The slice validation and API tests are integrated into a CI/CD framework using GitHub Actions, ensuring efficient and reliable model performance.
+---
+
+
 Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
 
 # Environment Set up
