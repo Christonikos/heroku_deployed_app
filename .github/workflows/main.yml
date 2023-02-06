@@ -28,6 +28,20 @@ jobs:
       run: |
         pip install black
         black .
+    # DVC setup and command
+    - name: Pull dependencies with DVC
+      run: |
+        dvc pull
+    # AWS set    
+    - name: Configure AWS Credentials
+      run: |
+        aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws configure set default.region ${{ env.AWS_REGION }}
+
+    - name: Deploy to AWS
+      run: |
+        aws s3 sync . ${{ secrets.AWS_BUCKET_NAME_LINK }}        
     # Run flake8 linter
     #- name: Run flake8 linter
     #  run: |
