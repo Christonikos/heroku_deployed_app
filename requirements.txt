@@ -7,5 +7,6 @@ fastapi==0.63.0
 uvicorn
 gunicorn
 spyder-kernels==2.1
+dvc==2.43.4
 
 
